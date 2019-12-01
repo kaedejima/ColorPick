@@ -12,24 +12,28 @@ class StartActivity : AppCompatActivity() {
         setContentView(R.layout.activity_start)
 
         classic.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            intent.putExtra("Theme", 0)
-            startActivity(intent)
+            val intent1 = Intent(this, MainActivity::class.java)
+            intent1.putExtra("Theme", 0)
+            startActivity(intent1)
         }
         minima.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            intent.putExtra("Theme", 1)
-            startActivity(intent)
+            val intent2 = Intent(this, MainActivity::class.java)
+            intent2.putExtra("Theme", 1)
+            startActivity(intent2)
         }
         pioneer.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            intent.putExtra("Theme", 2)
-            startActivity(intent)
+            val intent3 = Intent(this, MainActivity::class.java)
+            intent3.putExtra("Theme", 2)
+            startActivity(intent3)
         }
         modern.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            intent.putExtra("Theme", 3)
-            startActivity(intent)
+            val intent4 = Intent(this, MainActivity::class.java)
+            intent4.putExtra("Theme", 3)
+            startActivity(intent4)
+        }
+        howto.setOnClickListener{
+            val intent5 = Intent(this, HowtoActivity::class.java)
+            startActivity(intent5)
         }
     }
 }
