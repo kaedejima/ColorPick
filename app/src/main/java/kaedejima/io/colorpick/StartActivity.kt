@@ -10,30 +10,31 @@ class StartActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
+        var themeNum = 0
 
         classic.setOnClickListener {
-            val intent1 = Intent(this, MainActivity::class.java)
-            intent1.putExtra("Theme", 0)
-            startActivity(intent1)
+            val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("Theme", 0)
+            startActivity(intent)
         }
         minima.setOnClickListener {
-            val intent2 = Intent(this, MainActivity::class.java)
-            intent2.putExtra("Theme", 1)
-            startActivity(intent2)
+            val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("Theme", 1)
+            startActivity(intent)
         }
         pioneer.setOnClickListener {
-            val intent3 = Intent(this, MainActivity::class.java)
-            intent3.putExtra("Theme", 2)
-            startActivity(intent3)
+            val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("Theme", 2)
+            startActivity(intent)
         }
         modern.setOnClickListener {
-            val intent4 = Intent(this, MainActivity::class.java)
-            intent4.putExtra("Theme", 3)
-            startActivity(intent4)
+            val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("Theme", 3)
+            startActivity(intent)
         }
         howto.setOnClickListener{
-            val intent5 = Intent(this, HowtoActivity::class.java)
-            startActivity(intent5)
+            val intent = Intent(this, HowtoActivity::class.java)
+            startActivity(intent)
         }
     }
 }

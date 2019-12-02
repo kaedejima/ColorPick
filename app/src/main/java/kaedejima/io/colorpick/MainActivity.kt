@@ -14,8 +14,8 @@ class MainActivity : AppCompatActivity() {
     var scoreCount = 0
     var turnCount = 0
     var turnNum = 10
-    var randomeNumText = (0..3).shuffled().first()
-    var randomeNumColor = 1//(0..3).shuffled().first()
+    var randomeNumText = 2//(0..3).shuffled().first()
+    var randomeNumColor = 1////(0..3).shuffled().first()
 //    var selectedTheme = intent.getIntExtra("Theme", 0)
 //    var notfirst = intent.getBooleanExtra("not_First", false)
 
@@ -39,26 +39,26 @@ class MainActivity : AppCompatActivity() {
             1 -> { //minimalist
                 colors = listOf("DARK", "GRAY", "WHITE", "BROWN")
                 colorNum = listOf("#5e5d5d","#a7a5a7","#eae6e4","#a4918e")
-                buttonOne.setBackgroundColor(Color.parseColor("#5e5d5d"))
-                buttonTwo.setBackgroundColor(Color.parseColor("#a7a5a7"))
-                buttonThree.setBackgroundColor(Color.parseColor("#eae6e4"))
-                buttonFour.setBackgroundColor(Color.parseColor("#a4918e"))
+                buttonOne.setBackgroundColor(Color.parseColor(colorNum[0]))
+                buttonTwo.setBackgroundColor(Color.parseColor(colorNum[1]))
+                buttonThree.setBackgroundColor(Color.parseColor(colorNum[2]))
+                buttonFour.setBackgroundColor(Color.parseColor(colorNum[3]))
             }
             2 -> { //pionneer
                 colors = listOf("PURPLE", "PINK", "YELLOW", "BLACK")
-                colorNum = listOf("#802c6e","#f0326e","#f7aa3","#3a3134")
-                buttonOne.setBackgroundColor(Color.parseColor("#802c6e"))
-                buttonTwo.setBackgroundColor(Color.parseColor("#f0326e"))
-                buttonThree.setBackgroundColor(Color.parseColor("#f7aa35"))
-                buttonFour.setBackgroundColor(Color.parseColor("#3a3134"))
+                colorNum = listOf("#802c6e","#f0326e","#f7aa35","#3a3134")
+                buttonOne.setBackgroundColor(Color.parseColor(colorNum[0]))
+                buttonTwo.setBackgroundColor(Color.parseColor(colorNum[1]))
+                buttonThree.setBackgroundColor(Color.parseColor(colorNum[2]))
+                buttonFour.setBackgroundColor(Color.parseColor(colorNum[3]))
             }
             3 -> { //modern
                 colors = listOf("NAVY", "BLUE", "WHITE", "ORANGE")
                 colorNum = listOf("#2e364f","2d5d7c0","#f3f0e2","#ef5939")
-                buttonOne.setBackgroundColor(Color.parseColor("#2e364f"))
-                buttonTwo.setBackgroundColor(Color.parseColor("#2d5d7c"))
-                buttonThree.setBackgroundColor(Color.parseColor("#f3f0e2"))
-                buttonFour.setBackgroundColor(Color.parseColor("#ef5939"))
+                buttonOne.setBackgroundColor(Color.parseColor(colorNum[0]))
+                buttonTwo.setBackgroundColor(Color.parseColor(colorNum[1]))
+                buttonThree.setBackgroundColor(Color.parseColor(colorNum[2]))
+                buttonFour.setBackgroundColor(Color.parseColor(colorNum[3]))
             }
         }
 
@@ -111,11 +111,66 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("Score_Number", scoreCount)
 //            intent.putExtra("Theme_toResult", selectedTheme)
             startActivity(intent)
-        }else{
-            randomeNumText = (0..3).shuffled().first()
+        }
+        /*else{
+            randomeNumText = //(0..3).shuffled().first()
             textView.text = colors[randomeNumText]
-            randomeNumColor = 0//(0..3).shuffled().first()
-            textView.setTextColor(Color.parseColor(colorNum[randomeNumColor]))
+            randomeNumColor = //(0..3).shuffled().first()
+            textView.setTextColor(Color.parseColor(colorNum[0]))
+        }*/
+        else {
+            when (turnCount) {
+                0 -> {
+                    randomeNumText = 2//(0..3).shuffled().first()
+                    textView.text = colors[randomeNumText]
+                    textView.setTextColor(Color.parseColor(colorNum[3]))
+                }
+                1 -> {
+                    randomeNumText = 0//(0..3).shuffled().first()
+                    textView.text = colors[randomeNumText]
+                    textView.setTextColor(Color.parseColor(colorNum[2]))
+                }
+                2 -> {
+                    randomeNumText = 1//(0..3).shuffled().first()
+                    textView.text = colors[randomeNumText]
+                    textView.setTextColor(Color.parseColor(colorNum[0]))
+                }
+                3 -> {
+                    randomeNumText = 1//(0..3).shuffled().first()
+                    textView.text = colors[randomeNumText]
+                    textView.setTextColor(Color.parseColor(colorNum[1]))
+                }
+                4 -> {
+                    randomeNumText = 3//(0..3).shuffled().first()
+                    textView.text = colors[randomeNumText]
+                    textView.setTextColor(Color.parseColor(colorNum[3]))
+                }
+                5 -> {
+                    randomeNumText = 0//(0..3).shuffled().first()
+                    textView.text = colors[randomeNumText]
+                    textView.setTextColor(Color.parseColor(colorNum[3]))
+                }
+                6 -> {
+                    randomeNumText = 2//(0..3).shuffled().first()
+                    textView.text = colors[randomeNumText]
+                    textView.setTextColor(Color.parseColor(colorNum[2]))
+                }
+                7 -> {
+                    randomeNumText = 3//(0..3).shuffled().first()
+                    textView.text = colors[randomeNumText]
+                    textView.setTextColor(Color.parseColor(colorNum[1]))
+                }
+                8 -> {
+                    randomeNumText = 0//(0..3).shuffled().first()
+                    textView.text = colors[randomeNumText]
+                    textView.setTextColor(Color.parseColor(colorNum[0]))
+                }
+                9 -> {
+                    randomeNumText = 1//(0..3).shuffled().first()
+                    textView.text = colors[randomeNumText]
+                    textView.setTextColor(Color.parseColor(colorNum[3]))
+                }
+            }
         }
 
     }

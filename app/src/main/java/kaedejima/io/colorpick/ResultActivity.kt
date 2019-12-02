@@ -17,14 +17,14 @@ class ResultActivity : AppCompatActivity() {
 //        var notFirst : Boolean = true
         resultTextView.text = Integer.toString(score)
         tryAgain.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
+            val intent1 = Intent(this, MainActivity::class.java)
 //            intent.putExtra("Theme_Again", theme)
 //            intent.putExtra("not_First", notFirst)
-            startActivity(intent)
+            startActivity(intent1)
         }
         backToTheme.setOnClickListener {
-            val intent = Intent(this, StartActivity::class.java)
-            startActivity(intent)
+            val intent2 = Intent(this, StartActivity::class.java)
+            startActivity(intent2)
         }
         //scoreによって、メッセージを変える！！！
     }

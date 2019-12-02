@@ -28,7 +28,7 @@
             android:layout_margin="5dp"
             android:layout_weight="0.2"
             android:background="#ed6767"
-            android:text="BACK TO MENU"
+            android:text="@string/tomenu"
             android:textSize="24sp" />
 
     </LinearLayout>
