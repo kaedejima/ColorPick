@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     var turnCount = 0
     var turnNum = 10
     var randomeNumText = (0..3).shuffled().first()
-//    var randomeNumColor = (0..3).shuffled().first()
+    var randomeNumColor = 1//(0..3).shuffled().first()
 //    var selectedTheme = intent.getIntExtra("Theme", 0)
 //    var notfirst = intent.getBooleanExtra("not_First", false)
 
@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         when(selectedTheme){
             0 -> { //classic
                 colors = listOf("YELLOW", "GREEN", "RED", "BLUE")
-                colorNum = listOf("#827e00","#005900","#8c0e0e","#0a0a77")
+                colorNum = listOf("#e6e600","#00e600","#e60000","#0088e6")
                 buttonOne.setBackgroundColor(Color.parseColor(colorNum[0]))
                 buttonTwo.setBackgroundColor(Color.parseColor(colorNum[1]))
                 buttonThree.setBackgroundColor(Color.parseColor(colorNum[2]))
@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         textView.text = colors[randomeNumText]
-//        textView.setTextColor(Color.parseColor(colorNum[randomeNumColor]))
+        textView.setTextColor(Color.parseColor(colorNum[1]))
         progressBar.max = turnNum
 
         buttonOne.setOnClickListener {
@@ -114,8 +114,8 @@ class MainActivity : AppCompatActivity() {
         }else{
             randomeNumText = (0..3).shuffled().first()
             textView.text = colors[randomeNumText]
-//            randomeNumColor = (0..3).shuffled().first()
-//            textView.setTextColor(Color.parseColor(colorNum[randomeNumColor]))
+            randomeNumColor = 0//(0..3).shuffled().first()
+            textView.setTextColor(Color.parseColor(colorNum[randomeNumColor]))
         }
 
     }
