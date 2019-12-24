@@ -1,4 +1,4 @@
 # ColorPick
-![Logo Top Page](logopage.png)
-![Start Screen](startscreen.png)
-![Pioneer Theme](demopioneer1.png)
+<img src="logopage.png" width="500px">
+<img src="startscreen.png" width="500px">
+<img src="demopioneer1.png" width="500px">
