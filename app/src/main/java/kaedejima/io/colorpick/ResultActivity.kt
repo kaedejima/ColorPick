@@ -13,12 +13,13 @@ class ResultActivity : AppCompatActivity() {
         setContentView(R.layout.activity_result)
 
         var score = intent.getIntExtra("Score_Number", 0)
-//        var theme = intent.getIntExtra("Theme_toResult", 0)
+        var theme = intent.getIntExtra("Theme", 0)
 //        var notFirst : Boolean = true
-        resultTextView.text = Integer.toString(score)
+        println(theme)
+        resultTextView.text = score.toString()
         tryAgain.setOnClickListener {
             val intent1 = Intent(this, MainActivity::class.java)
-//            intent.putExtra("Theme_Again", theme)
+            intent.putExtra("Theme", theme)
 //            intent.putExtra("not_First", notFirst)
             startActivity(intent1)
         }
